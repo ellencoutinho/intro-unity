@@ -6,12 +6,12 @@ public class MenuActions : MonoBehaviour
     public void IniciaJogo()
     {
         GameController.Init();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void Menu()
     {
         GameController.Init();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
