@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     private float currentTime = 0f;
     public TextMeshProUGUI timerText_TMP;
+    public TextMeshProUGUI TempoFinal;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,7 +29,10 @@ public class UIManager : MonoBehaviour
                 end_audio.Play();
                 has_played = true;
             }
-            timerText_TMP.text = "";
+            TempoFinal.text = timerText_TMP.text;
+            // Torna timerText_TMP invisivel
+            timerText_TMP.color = new Color(timerText_TMP.color.r, timerText_TMP.color.g, timerText_TMP.color.b, 0f);
+
             endGamePanel.SetActive(true);
         }
 
